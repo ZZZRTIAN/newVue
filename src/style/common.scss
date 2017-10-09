@@ -1,0 +1,22 @@
+@import 'px2rem'; //第一步先把px2rem导入
+
+$designWidth : 640; //写scss之前，必须要先定义designWidth。
+
+body, html, div, p, a, input, label, span, h3, table, tr, td, header, footer, section, em, i, ul, li, dl, dt, dd, img, textarea,h3,h4,h1,h2,h5,h6,ol{ margin: 0; padding: 0; outline: none; font-family: "Arial", "Microsoft YaHei";}
+a { outline: none; color: #828181;text-decoration: none;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+ul, ul li, dl, dt, dd{ list-style: none; }
+*{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+img{ border: none; }
+
+.fix{*zoom:1;}
+.fix:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+
+body{
+	width: 16rem;
+	margin: 0 auto;
+	padding: 0;
+}
+
