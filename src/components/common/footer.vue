@@ -21,7 +21,8 @@
 
 <style lang="scss">
   @import '../../style/px2rem.scss';
-  $designWidth : 640; //写scss之前，必须要先定义designWidth。
+  //designWidth 设计图宽度
+  $designWidth : 640; 
 
   footer {
     position: fixed;
