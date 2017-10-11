@@ -38,11 +38,9 @@ export default {
   @import 'style/px2rem.scss';
   @import 'style/common.scss';
   #app{
-    max-width: px2rem(640); 
-    min-width: px2rem(320); 
     width: 100%; 
-    height: 100%; 
-    margin: 0 auto; 
-    background-color: gray
+    background-color: gray;
+    position: relative;
+    overflow: hidden;
   }
 </style>

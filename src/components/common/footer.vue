@@ -21,29 +21,33 @@
 
 <style lang="scss">
   @import '../../style/px2rem.scss';
-  $designWidth : 750; //写scss之前，必须要先定义designWidth。
+  $designWidth : 640; //写scss之前，必须要先定义designWidth。
 
   footer {
     position: fixed;
     bottom: 0;
-    max-width: 16rem;
-    min-width: 8rem;
+    width: 16rem;
     height: px2rem(210);
-    background-color: rebeccapurple
   }
 
   .record-box{
     height: px2rem(118);
-    width: 100%;
+    margin: px2rem(34) px2rem(59) px2rem(58);
+    text-align: center;
     position: relative;
     z-index: 9999;
-    text-align: center;
+    .self,.tts_play{
+      position: absolute;
+      top: 50%;
+      margin-top: - px2rem(86/2);
+    }
   }
 
   .small_icon {
     border-radius: 50%;
     height: px2rem(86);
     width: px2rem(82);
+    
   }
 
   .tts_play {
@@ -58,11 +62,44 @@
     background-size: cover;
     width: px2rem(111);
     height: px2rem(118);
+    margin: 0 auto;
+    display: inline-block;
+    .recordIcon {
+        background: url(../../images/recordIcon.png) no-repeat;
+        width: px2rem(60);
+        height: px2rem(60);
+        background-size: cover;
+        position: absolute;
+        margin: px2rem(29) 0 0 px2rem(25.5);
+    }
+    .waitIcon {
+      background-position-x: - px2rem(55);
+      animation: waiting 3s infinite linear;
+    }
   }
 
   .self {
     @extend .small_icon;
     background: url(../../images/self_play.png) no-repeat;
     background-size: cover;
+    right: 0;
   }
+
+  @keyframes waiting {
+    form {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes waiting {
+    form {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
 </style>
