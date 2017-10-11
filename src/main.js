@@ -3,9 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './js/remChange';
+import VueTouch from 'vue-touch'
+
+import './js/remChange'
 
 Vue.config.productionTip = false
+
+Vue.use(VueTouch)
 
 /* eslint-disable no-new */
 new Vue({
