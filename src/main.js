@@ -7,9 +7,7 @@ import VueTouch from 'vue-touch'
 
 import './js/remChange'
 
-Vue.config.productionTip = false
-
-Vue.use(VueTouch)
+Vue.use(VueTouch, {name: 'v-touch'})
 
 /* eslint-disable no-new */
 new Vue({
